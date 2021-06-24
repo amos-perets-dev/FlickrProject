@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.home.HomePageFragment">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_text_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:hint="@string/home_page_edit_text_hint_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_search"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/home_page_button_search_text"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_input" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_pick_contact"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/home_page_button_pick_contact_text"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_photos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_pick_contact" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_load_data"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_view_photos"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_view_photos"
+        app:layout_constraintStart_toStartOf="@+id/recycler_view_photos"
+        app:layout_constraintTop_toTopOf="@+id/recycler_view_photos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
