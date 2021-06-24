@@ -1,12 +1,8 @@
 package com.example.flickrproject.data
 
-sealed class LoadState() {
+sealed class LoadState {
 
-    object Load : LoadState() {
+    object Load : LoadState()
 
-    }
-
-    object Finish : LoadState() {
-
-    }
+    object Finish : LoadState()
 }
